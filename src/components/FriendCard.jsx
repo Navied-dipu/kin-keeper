@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 export default function FriendCard({ friend }) {
     const { id, name, picture, days_since_contact, tags, status } = friend;
     return (
-        <div><div className="card bg-base-100  mx-auto  shadow-sm">
+        <Link href={`/${id}`}><div className="card bg-base-100  mx-auto  shadow-sm">
             <div className="avatar flex justify-center items-center mt-5">
                 <div className="w-24 rounded-full bg-amber-100 p-1">
                     <Image src={picture} alt="profile" width={100} height={100} />
@@ -31,6 +32,6 @@ export default function FriendCard({ friend }) {
                     <span className="bg-red-600 text-white font-semibold rounded-full px-2">Overdue</span>
                 )}
             </div>
-        </div></div>
+        </div></Link>
     )
 }
