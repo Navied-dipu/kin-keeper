@@ -53,7 +53,7 @@ export default function Navber() {
 
   return (
     <div>
-      <div className="navbar max-w-6xl mx-auto bg-white text-black">
+      <div className="navbar px-15  bg-white shadow-xl text-black">
         <div className="flex-1">
           <Link href="/">
             <Image
