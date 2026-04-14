@@ -3,7 +3,7 @@
 import { createContext, useState } from "react";
 
 
-export const InstallAppsContext = createContext();
+export const FriendContext = createContext();
 
 const FriendProvider = ({ children }) => {
     const [friends, setFriend] = useState([]);
@@ -14,9 +14,9 @@ const FriendProvider = ({ children }) => {
     };
 
     return (
-        <InstallAppsContext.Provider value={data}>
+        <FriendContext.Provider value={data}>
             {children}
-        </InstallAppsContext.Provider>
+        </FriendContext.Provider>
     );
 };
 

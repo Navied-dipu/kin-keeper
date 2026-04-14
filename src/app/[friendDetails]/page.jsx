@@ -1,3 +1,4 @@
+import ContanctCard from "@/components/ContactCard";
 import Image from "next/image";
 
 const FriendDetails = async ({ params }) => {
@@ -114,7 +115,7 @@ const FriendDetails = async ({ params }) => {
 
                     </div>
 
-                    {/* RELATIONSHIP GOAL */}
+
                     <div className="card bg-base-100 shadow p-4 md:p-5">
                         <div className="flex justify-between items-center">
                             <h2 className="font-semibold text-xl text-[#244d3f]">
@@ -129,50 +130,18 @@ const FriendDetails = async ({ params }) => {
                         </p>
                     </div>
 
-                    {/* QUICK CHECK-IN */}
+
                     <div className="card bg-base-100 shadow p-4 md:p-5">
                         <h2 className="font-semibold mb-3 md:mb-4 text-xl text-[#244d3f]">
                             Quick Check-In
                         </h2>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-3">
-                            <div className="card shadow-sm">
-                                <div className="card-body flex flex-col items-center text-center">
-                                    <h2 className=" text-xl">
-                                        📞
-                                    </h2>
-                                    <h2 className="text-sm md:text-lg font-semibold">
-                                        Call
-                                    </h2>
-                                </div>
-                            </div>
-                            <div className="card shadow-sm">
-                                <div className="card-body flex flex-col items-center text-center">
-                                    <h2 className=" text-xl">
-                                        💬
-                                    </h2>
-                                    <h2 className="text-sm md:text-lg font-semibold">
-                                        Text
-                                    </h2>
-                                </div>
-                            </div>
-                            <div className="card shadow-sm">
-                                <div className="card-body flex flex-col items-center text-center">
-                                    <h2 className=" text-xl">
-                                        🎥
-                                    </h2>
-                                    <h2 className="text-sm md:text-lg font-semibold">
-                                        Video
-                                    </h2>
-                                </div>
-                            </div>
-
-
-                        </div>
+                        <ContanctCard friend={friend}></ContanctCard>
                     </div>
 
                 </div>
-            </div></div>
+            </div>
+        </div>
 
     );
 };

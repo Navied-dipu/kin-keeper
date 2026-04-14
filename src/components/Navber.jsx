@@ -26,7 +26,7 @@ export default function Navber() {
       <li>
         <Link
           href="/timeline"
-          className={`flex items-center gap-2 font-semibold ${
+          className={`flex items-center gap-2 mx-1 font-semibold ${
             pathname === "/timeline"
               ? "bg-[#244d3f] text-white rounded"
               : ""

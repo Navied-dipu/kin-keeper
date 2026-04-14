@@ -3,6 +3,7 @@ import "./globals.css";
 import Navber from "@/components/Navber";
 import Footer from "@/components/Footer";
 import Providers from "@/lib/provider";
+import FriendProvider from "@/context/install.context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,11 +28,11 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Providers>
+        <FriendProvider>
           <Navber></Navber>
           {children}
           <Footer></Footer>
-        </Providers>
+        </FriendProvider>
       </body>
     </html>
   );
