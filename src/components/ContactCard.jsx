@@ -2,6 +2,7 @@
 
 import { FriendContext } from '@/context/install.context'
 import { useContext } from 'react'
+import { toast } from 'react-toastify';
 
 export default function ContanctCard({ friend }) {
     const { friends, setFriend } = useContext(FriendContext);
@@ -19,6 +20,7 @@ export default function ContanctCard({ friend }) {
                 })
             }
         ]);
+        toast.success(`${friend.name} ${method} successfuly `)
     };
 
     return (

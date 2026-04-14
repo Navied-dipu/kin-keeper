@@ -4,6 +4,7 @@ import Navber from "@/components/Navber";
 import Footer from "@/components/Footer";
 import Providers from "@/lib/provider";
 import FriendProvider from "@/context/install.context";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <FriendProvider>
           <Navber></Navber>
           {children}
+          <ToastContainer />
           <Footer></Footer>
         </FriendProvider>
       </body>
