@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐣 KeenKeeper — Friend Relationship Tracker App
 
-## Getting Started
+## 📌 Project Description
+KeenKeeper is a responsive full-stack friendly relationship tracking web application built with **Next.js** and **Tailwind CSS**.  
+It helps users manage friendships, track interactions (Call, Text, Video), and visualize relationship activity through analytics and timelines.
 
-First, run the development server:
+The app is fully responsive and works smoothly across **mobile, tablet, and desktop devices**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Live Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🔝 Navbar
+- Clean responsive navbar inspired by Figma design
+- Logo on the left, navigation links on the right
+- Pages: Home, Timeline, Stats
+- Active route highlighting with icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### 🎯 Home Page Banner
+- Centered title and subtitle
+- “Add a Friend” button with icon
+- 4 summary/stat cards below banner
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 👫 Friends Management
+- Friends data loaded from a local JSON file
+- Displays 6–10 realistic friend profiles
+- Each friend card includes:
+  - Profile picture
+  - Name
+  - Days since last contact
+  - Tags (e.g., college, work, close friend)
+  - Status indicator (overdue / almost due / on-track)
+- Responsive grid layout (4 columns on large screens)
+- Clickable cards → navigates to Friend Details page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 👤 Friend Details Page
+Two-column layout:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Left Side:
+- Profile picture
+- Name & email
+- Status badge (color-coded)
+- Tags & bio
+- Action buttons:
+  - ⏰ Snooze 2 Weeks
+  - 📦 Archive
+  - 🗑️ Delete
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Right Side:
+- 📊 Stats Cards:
+  - Days Since Contact
+  - Goal (days)
+  - Next Due Date
+- 🎯 Relationship Goal Card (editable UI)
+- ⚡ Quick Check-In:
+  - Call 📞
+  - Text 💬
+  - Video 🎥
+
+---
+
+### ⚡ Quick Check-In System
+- Clicking Call/Text/Video:
+  - Adds new timeline entry automatically
+  - Generates title like:
+    - "Call with John Doe"
+    - "Text with John Doe"
+  - Shows toast notification
+
+---
+
+### 📜 Timeline Page
+- Displays all interaction history
+- Each entry includes:
+  - Date
+  - Type icon (Call / Text / Video)
+  - Title of interaction
+- Filter system:
+  - Filter by Call
+  - Filter by Text
+  - Filter by Video
+
+---
+
+### 📊 Stats / Analytics Page
+- “Friendship Analytics” dashboard
+- Pie chart using **Recharts**
+- Shows interaction distribution:
+  - Call
+  - Text
+  - Video
+
+---
+
+### 🦶 Footer
+- Fully responsive footer
+- Matches overall design theme
+
+---
+
+## 🛠️ Tech Stack
+- ⚛️ Next.js
+- ⚡ React.js
+- 🎨 Tailwind CSS
+- 🧩 DaisyUI
+- 📊 Recharts
+- 🔔 React Toastify (notifications)
+
+---
+
+## 📱 Responsive Design
+Fully optimized for:
+- 📱 Mobile
+- 📟 Tablet
+- 💻 Desktop
+
+---
+
+## ⚙️ Extra Requirements Implemented
+- ✅ 404 Page for invalid routes
+- ✅ Loading animation while fetching friends data
+- ✅ Toast notifications for interactions
+- ✅ Page refresh safe (no runtime errors after deployment)
+- ✅ Clean JSON-based data structure
+
+---
+
+## 📂 JSON Data Structure Example
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "picture": "https://example.com/photo.jpg",
+  "email": "john@example.com",
+  "days_since_contact": 12,
+  "status": "overdue",
+  "tags": ["college", "close friend"],
+  "bio": "Met in university. Love hiking together.",
+  "goal": 14,
+  "next_due_date": "2025-07-20"
+}
