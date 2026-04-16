@@ -1,16 +1,19 @@
-import ContanctCard from "@/components/ContactCard";
+
+import ContactCard from "@/components/ContactCard";
+import { friends } from "@/data";
 import Image from "next/image";
 
+
+
 const FriendDetails = async ({ params }) => {
-    const { friendDetails } = await params;
-
-    const res = await fetch("http://localhost:3000/data.json", {
-        cache: "no-store",
-    });
-
-    const data = await res.json();
-    const friend = data.find((item) => item.id === friendDetails);
-
+    const { id } = await params;
+    
+   
+   
+    const friend = friends?.find(
+        (item) => Number(item.id) === Number(id)
+    );
+    console.log(friend)
     if (!friend) {
         return <h2>Friend not found</h2>;
     }
@@ -136,7 +139,7 @@ const FriendDetails = async ({ params }) => {
                             Quick Check-In
                         </h2>
 
-                        <ContanctCard friend={friend}></ContanctCard>
+                        <ContactCard friend={friend}></ContactCard>
                     </div>
 
                 </div>

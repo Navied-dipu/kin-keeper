@@ -4,11 +4,11 @@ import { FriendContext } from '@/context/install.context'
 import { useContext } from 'react'
 import { toast } from 'react-toastify';
 
-export default function ContanctCard({ friend }) {
-    const { friends, setFriend } = useContext(FriendContext);
+export default function ContactCard({ friend }) {
+    const { friends, setFriends } = useContext(FriendContext);
     console.log(friends)
     const handleFriend = (method) => {
-        setFriend((prev) => [
+        setFriends((prev) => [
             ...prev,
             {
                 id: friend.id, method,

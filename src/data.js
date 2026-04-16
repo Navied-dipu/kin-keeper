@@ -1,0 +1,122 @@
+export const friends =[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "john@example.com",
+    "days_since_contact": 12,
+    "status": "overdue",
+    "tags": ["close friend"],
+    "bio": "Met in university. Love hiking together.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": "2",
+    "name": "Sarah Smith",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "sarah@example.com",
+    "days_since_contact": 5,
+    "status": "on_track",
+    "tags": ["work", "team"],
+    "bio": "Colleague from office. Works in design team.",
+    "goal": 10,
+    "next_due_date": "2025-07-25"
+  },
+  {
+    "id": "3",
+    "name": "Michael Brown",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "michael@example.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["gym", "fitness"],
+    "bio": "Gym partner. Keeps me motivated.",
+    "goal": 7,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": "4",
+    "name": "Emily Davis",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "emily@example.com",
+    "days_since_contact": 2,
+    "status": "active",
+    "tags": ["family"],
+    "bio": "Cousin. Very close to family gatherings.",
+    "goal": 30,
+    "next_due_date": "2025-08-10"
+  },
+  {
+    "id": "5",
+    "name": "David Wilson",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "david@example.com",
+    "days_since_contact": 9,
+    "status": "on_track",
+    "tags": ["business", "network"],
+    "bio": "Met at a startup event. Potential collaborator.",
+    "goal": 14,
+    "next_due_date": "2025-07-22"
+  },
+  {
+    "id": "6",
+    "name": "Sophia Taylor",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "sophia@example.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["school", "old friend"],
+    "bio": "School friend. Haven’t talked in a while.",
+    "goal": 10,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": "7",
+    "name": "James Anderson",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "james@example.com",
+    "days_since_contact": 1,
+    "status": "active",
+    "tags": ["neighbor"],
+    "bio": "Lives next door. We chat often.",
+    "goal": 5,
+    "next_due_date": "2025-07-28"
+  },
+  {
+    "id": "8",
+    "name": "Olivia Thomas",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "olivia@example.com",
+    "days_since_contact": 7,
+    "status": "on_track",
+    "tags": ["travel", "friend"],
+    "bio": "Met during a trip. Planning another adventure.",
+    "goal": 14,
+    "next_due_date": "2025-07-23"
+  },
+  {
+    "id": "9",
+    "name": "William Jackson",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "william@example.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["mentor"],
+    "bio": "Guides me in career decisions.",
+    "goal": 10,
+    "next_due_date": "2025-07-17"
+  },
+  {
+    "id": "10",
+    "name": "Ava White",
+    "picture": "https://i.ibb.co/JWjPYQvT/924915.png",
+    "email": "ava@example.com",
+    "days_since_contact": 3,
+    "status": "active",
+    "tags": ["friend", "creative"],
+    "bio": "Loves art and photography.",
+    "goal": 12,
+    "next_due_date": "2025-07-26"
+  }
+]
