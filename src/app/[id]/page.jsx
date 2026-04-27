@@ -7,11 +7,11 @@ import Image from "next/image";
 
 const FriendDetails = async ({ params }) => {
     const { id } = await params;
-    
-   
-   
+
+
+
     const friend = friends?.find(
-        (item) => Number(item.id) === Number(id)
+        (item) => (item.id) == (id)
     );
     console.log(friend)
     if (!friend) {

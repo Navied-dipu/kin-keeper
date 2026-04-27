@@ -4,7 +4,9 @@ import FriendCout from "@/components/FriendCout";
 import Image from "next/image";
 
 export default async function Home() {
-  const res = await fetch("https://kin-keeper-a7-lime.vercel.app/data.json"
+  const res = await fetch("https://kin-keeper-a7-lime.vercel.app/data.json",{
+  cache: "no-store",
+}
     
   );
   const data = await res.json();
