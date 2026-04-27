@@ -1,14 +1,15 @@
 
 import ContactCard from "@/components/ContactCard";
-import { friends } from "@/data";
 import Image from "next/image";
 
 
 
 const FriendDetails = async ({ params }) => {
     const { id } = await params;
-
-
+    const res = await fetch("https://kin-keeper-a7-lime.vercel.app/data.json", {
+        cache: "no-store",
+    });
+    const friends = await res.json();
 
     const friend = friends?.find(
         (item) => (item.id) == (id)
